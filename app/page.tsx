@@ -1,9 +1,9 @@
 import { SearchForm } from "@/components/search-form";
 import { Suspense } from "react";
-import Pagination from "@/components/repositories/pagination";
+import Pagination from "@/components/pagination";
 import { DataTable } from "@/components/data-table";
 import { fetchRepositories } from "@/lib/data";
-import { columns } from "@/components/repositories/columns";
+import { columns } from "@/components/columns";
 
 export default async function Home(props: {
   searchParams?: Promise<{
@@ -36,10 +36,13 @@ export default async function Home(props: {
         </div>
         <div className="mt-4 md:flex items-start justify-between gap-2 md:mt-8">
           <SearchForm />
-          <Pagination totalPages={total_pages} />
+          {total_pages > 1 && <Pagination totalPages={total_pages} />}
         </div>
         <div className="mt-8">
-          <Suspense key={query + currentPage} fallback={<div>Loading...</div>}>
+          <Suspense
+            key={query + currentPage + sort + order}
+            fallback={<div>Loading...</div>}
+          >
             <DataTable columns={columns} data={items} />
           </Suspense>
         </div>

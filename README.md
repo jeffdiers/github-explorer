@@ -49,6 +49,7 @@ visiit http://localhost:3000
 
 - Search Filters for more precise results
 - Improved error handeling with user-friendly messages
+- Improved loading state using skeletons
 - Dev tools like ESLint, Prettier, Git Hooks
 - Visual testing with Chromatic
 - Storybook for component library

@@ -52,7 +52,7 @@ export function SearchForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full flex gap-2 mr-8 mb-4"
+        className="w-3/5 flex gap-2 mr-8 mb-4"
       >
         <FormField
           control={form.control}

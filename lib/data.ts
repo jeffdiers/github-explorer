@@ -1,4 +1,4 @@
-import { Repository } from "@/components/repositories/columns";
+import { Repository } from "@/components/columns";
 
 type SearchResponse = {
   incomplete_results: boolean;
