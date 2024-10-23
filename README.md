@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitHub Repository Explorer
 
-## Getting Started
+This project is a simple React + Next.js application that allows users to search for repositories by entering a GitHub username or organization. The results are displayed in a paginated, sortable table.
 
-First, run the development server:
+Author: [Jeff Diers](https://github.com/jeffdiers)
+
+---
+
+### Features
+
+- Search for GitHub repositories by entering a username or organization.
+- Fast search - ths search state is stored in the url and fetched on the server.
+- Pagination to navigate through repository results.
+- Sorting by repository fields.
+- Clean and responsive UI components built with shadcn/ui
+
+---
+
+### Tech Stack
+
+- React
+- Next.js
+- TypeScript
+- shadcn/ui (Tailwind + Radix)
+
+---
+
+### Getting Started
+
+##### Prerequisites
+
+- Node.js
+- npm
+
+##### Installation
 
 ```bash
+git clone https://github.com/jeffdiers/github-explorer.git
+cd github-explorer
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+visiit http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Future Improvements
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Search Filters for more precise results
+- Improved error handeling with user-friendly messages
+- Dev tools like ESLint, Prettier, Git Hooks
+- Visual testing with Chromatic
+- Storybook for component library
